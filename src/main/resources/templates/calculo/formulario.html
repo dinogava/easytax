@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
+<head>
+
+    <title>Calculo Pro-rata die</title>
+</head>
+<body>
+<div layout:fragment="conteudo" >
+      <h1>Calculo de Juros pro-rata die</h1>
+
+<form method="post" action="/inicio" >
+      <div>
+        <label for="valorPresente">Valor:</label>
+        <input id="valorPresente" name="valorPresente" >
+      </div>
+        <br>
+      <div>
+        <label for="taxaJuros">Taxa:</label>
+        <input id="taxaJuros" name="taxaJuros" >
+      </div>
+        <br>
+       <div>
+        <label for="dataInicio">Inicio:</label>
+        <input id="dataInicio" name="dataInicio" >
+       </div>
+        <br>
+      <div>
+        <label for="dataFinal">Final:</label>
+        <input id="dataFinal" name="dataFinal" >
+      </div>
+<br>
+        <input type="submit" value="Calcular!">
+
+
+</form>
+</div>
+</body>
+</html>

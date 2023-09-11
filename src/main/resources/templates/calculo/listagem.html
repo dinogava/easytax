@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+                xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+                layout:decorate="~{template.html}">
+
+<head>
+    <title>Resultados</title>
+</head>
+<body>
+    <div layout:fragment="conteudo" >
+
+      <h1>Resultados: </h1>
+        <a href="/inicio/formulario">Novo Calculo</a>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>VALOR PRESENTE</th>
+            <th>PORCENTAGEM DE JUROS AO DIA</th>
+            <th>DATA DE VENCIMENTO</th>
+            <th>DATA FINAL</th>
+            <th>DIAS DE ATRASO</th>
+            <th>VALOR TOTAL DOS JUROS</th>
+            <th>VALOR TOTAL DA DIVIDA</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="resultado : ${resultados}">
+            <td th:text="${resultado.valorPresente}"></td>
+            <td th:text="${resultado.taxaJuros}"></td>
+            <td th:text="${resultado.dataInicio}"></td>
+            <td th:text="${resultado.dataFinal}"></td>
+            <td th:text="${resultado.diasAtraso}"></td>
+            <td th:text="${resultado.valorTotalJuros}"></td>
+            <td th:text="${resultado.valorFinal}"></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+</body>
+</html>
